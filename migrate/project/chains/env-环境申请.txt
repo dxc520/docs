@@ -1,0 +1,101 @@
+
+
+原因：搭建区块链验证环境
+
+虚拟机个数：  2台， 
+
+配置依赖
+
+配置 	最低配置 	推荐配置
+OS                  Ubuntu 20.04
+CPU 	1.5GHz 	     2.4GHz
+内存 	8GB 	     16GB
+核心 	4核 	           8核
+带宽 	2Mb 	     10Mb
+
+===============================================================
+
+
+10.63.14.212
+10.63.14.213
+
+用户：user
+密码：wlh123456
+
+
+
+
+===============================================================
+
+用途区分：
+
+10.63.14.212 实施一键化部署，部署webase 与 长安链
+
+10.63.14.213 ：---> 实施分步部署 验证，
+
+
+
+
+----------长安链生产环境安装------------
+
+长安链生产环境安装： https://docs.chainmaker.org.cn/v3.0.0/html/instructions/%E5%9F%BA%E4%BA%8ECA%E6%9C%8D%E5%8A%A1%E6%90%AD%E5%BB%BA%E9%95%BF%E5%AE%89%E9%93%BE.html
+
+
+
+
+
+sign.crt ,  sign.key  各有什么用途
+
+https://blog.csdn.net/qq_42703989/article/details/122088456
+
+
+------
+
+insert into cmb_chain_subscribe(id,create_at,update_at,chain_id,org_name,org_id,node_rpc_address,user_name,chain_mode) values(5,now(),now(),'guomiChain1','dxcDev3','dxcDev3','10.63.14.212:14302','dxcDevUser3','permissionedWithCert');
+
+
+
+
+
+
+------------------------------
+
+
+忽略:4 http://ppa.launchpad.net/webupd8team/java/ubuntu focal InRelease                                                                                                                                           
+命中:5 http://security.ubuntu.com/ubuntu focal-security InRelease                                                                                                                      
+错误:6 http://ppa.launchpad.net/webupd8team/java/ubuntu focal Release                                                                
+  404  Not Found [IP: 185.125.190.80 80]
+命中:7 https://download.docker.com/linux/ubuntu focal InRelease                                              
+命中:1 http://mirrors.tuna.tsinghua.edu.cn/ubuntu focal InRelease                       
+命中:2 http://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-updates InRelease
+命中:3 http://mirrors.tuna.tsinghua.edu.cn/ubuntu focal-backports InRelease
+正在读取软件包列表... 完成
+E: 仓库 “http://ppa.launchpad.net/webupd8team/java/ubuntu focal Release” 没有 Release 文件。
+N: 无法安全地用该源进行更新，所以默认禁用该源。
+N: 参见 apt-secure(8) 手册以了解仓库创建和用户配置方面的细节。
+
+
+
+
+
+
+
+
+
+export https_proxy=http://10.63.7.10:7897 http_proxy=http://10.63.7.10:7897 all_proxy=socks5://10.63.7.10:7897
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
